@@ -9,5 +9,8 @@ management:
     web:
       expose: '*'
       enabled: true
+    jmx:
+      expose: '*'
+      enabled: true
 
 
