@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: PCFSpringBootActuatorDemo
+  jpa:
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      expose: '*'
+      enabled: true
+
+

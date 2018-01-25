@@ -1,0 +1,43 @@
+Actuator Endpoints ->
+
+https://docs.spring.io/spring-boot/docs/2.0.0.M7/reference/htmlsingle/#production-ready
+
+pasapicella@pas-macbook:~/piv-projects$ http http://localhost:8080/actuator/health
+HTTP/1.1 200
+Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8
+Date: Thu, 25 Jan 2018 04:31:51 GMT
+Transfer-Encoding: chunked
+
+{
+    "status": "UP"
+}
+
+pasapicella@pas-macbook:~/piv-projects/springboot-actuator-2-demo$ http http://localhost:8080/actuator/trace
+HTTP/1.1 200
+Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8
+Date: Thu, 25 Jan 2018 04:37:44 GMT
+Transfer-Encoding: chunked
+
+{
+    "traces": [
+        {
+            "info": {
+                "headers": {
+                    "request": {
+                        "accept": "*/*",
+                        "accept-encoding": "gzip, deflate",
+                        "connection": "keep-alive",
+                        "host": "localhost:8080",
+                        "user-agent": "HTTPie/0.9.9"
+                    },
+                    "response": {
+                        "status": "404"
+                    }
+                },
+                "method": "GET",
+                "path": "/actuator/session",
+                "timeTaken": "2"
+            },
+            "timestamp": "2018-01-25T04:37:26.985+0000"
+        },
+        {
