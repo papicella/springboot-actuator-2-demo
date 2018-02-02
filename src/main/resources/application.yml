@@ -12,5 +12,3 @@ management:
     jmx:
       expose: '*'
       enabled: true
-
-

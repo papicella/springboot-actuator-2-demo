@@ -24,4 +24,5 @@ public class MyCLR implements CommandLineRunner {
 
         employeeRepository.findAll().forEach(System.out::println);
     }
+
 }
