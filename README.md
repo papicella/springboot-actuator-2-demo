@@ -1,4 +1,4 @@
-<h2>Pivotal Cloud Foundry Apps Manager Actuator Integration Demo </h2>
+<h2>Pivotal Cloud Foundry Apps Manager Spring Boot 2.0 Actuator Integration Demo </h2>
 
 ![alt tag](https://image.ibb.co/b5izL7/Screen_Shot_2018_03_04_at_9_00_42_PM.png)
 
