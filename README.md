@@ -1,6 +1,6 @@
 <h2>Pivotal Cloud Foundry Apps Manager Actuator Integration Demo </h2>
 
-![alt tag](https://image.ibb.co/d7Ecym/apps_manager_spring_1.png)
+![alt tag](https://image.ibb.co/b5izL7/Screen_Shot_2018_03_04_at_9_00_42_PM.png)
 
 The application.yml exposes all methods and is totally unsecure so you would not want to do this in a production application
 
