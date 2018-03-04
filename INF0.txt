@@ -41,3 +41,11 @@ Transfer-Encoding: chunked
             "timestamp": "2018-01-25T04:37:26.985+0000"
         },
         {
+
+Others ->
+
+http http://localhost:8080/actuator/env
+http http://localhost:8080/actuator/beans
+
+
+        }

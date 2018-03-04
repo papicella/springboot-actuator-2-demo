@@ -5,6 +5,9 @@ spring:
     hibernate:
       ddl-auto: update
 management:
+  endpoint:
+    health:
+      show-details: true
   endpoints:
     web:
       expose: '*'
@@ -12,3 +15,5 @@ management:
     jmx:
       expose: '*'
       enabled: true
+
+#management.cloudfoundry.skip-ssl-validation=true

@@ -3,5 +3,5 @@ applications:
 - name: springboot-actuator-appsmanager
   memory: 1G
   instances: 1
-  host: ${random-word}
+  random-route: true
   path: ./target/springboot-autuator-2-demo-0.0.1-SNAPSHOT.jar
