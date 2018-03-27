@@ -2,7 +2,7 @@
 
 ![alt tag](https://image.ibb.co/b5izL7/Screen_Shot_2018_03_04_at_9_00_42_PM.png)
 
-The application.yml exposes all methods and is totally unsecure so you would not want to do this in a production application
+The application.yml exposes all methods and is totally unsecured so you would not want to do this in a production application
 
 ```
 spring:
@@ -14,14 +14,15 @@ spring:
 management:
   endpoint:
     health:
-      show-details: true
+      enabled: true
+      show-details: when_authorized
   endpoints:
     web:
-      expose: '*'
-      enabled: true
+      exposure:
+        include: '*'
     jmx:
-      expose: '*'
-      enabled: true
+      exposure:
+        include: '*'
 ```
 
 <hr />

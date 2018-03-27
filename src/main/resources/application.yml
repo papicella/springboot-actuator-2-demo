@@ -7,13 +7,12 @@ spring:
 management:
   endpoint:
     health:
-      show-details: true
+      enabled: true
+      show-details: when_authorized
   endpoints:
     web:
-      expose: '*'
-      enabled: true
+      exposure:
+        include: '*'
     jmx:
-      expose: '*'
-      enabled: true
-
-#management.cloudfoundry.skip-ssl-validation=true
+      exposure:
+        include: '*'
