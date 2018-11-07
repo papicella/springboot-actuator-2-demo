@@ -8,7 +8,7 @@ management:
   endpoint:
     health:
       enabled: true
-      show-details: when_authorized
+      show-details: always
   endpoints:
     web:
       exposure:

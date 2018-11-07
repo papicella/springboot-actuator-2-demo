@@ -15,7 +15,7 @@ management:
   endpoint:
     health:
       enabled: true
-      show-details: when_authorized
+      show-details: always
   endpoints:
     web:
       exposure:
@@ -53,7 +53,7 @@ management:
   endpoint:
     health:
       enabled: true
-      show-details: when_authorized
+      show-details: always
   endpoints:
     web:
       exposure:
@@ -101,6 +101,130 @@ X-Xss-Protection: 1; mode=block
         }
     },
     "status": "UP"
+}
+```
+
+To access the endpoints you can use URL's as follows
+
+- View health
+
+```
+pasapicella@pas-macbook:~$ http http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/health
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 183
+Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8
+Date: Wed, 07 Nov 2018 03:20:25 GMT
+X-Vcap-Request-Id: 4c12e65a-3d28-4d69-5e43-d937686dbdad
+
+{
+    "details": {
+        "db": {
+            "details": {
+                "database": "H2",
+                "hello": 1
+            },
+            "status": "UP"
+        },
+        "diskSpace": {
+            "details": {
+                "free": 906285056,
+                "threshold": 10485760,
+                "total": 1073741824
+            },
+            "status": "UP"
+        }
+    },
+    "status": "UP"
+}
+```
+
+- View All Endpoints
+
+```
+pasapicella@pas-macbook:~$ http http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 2304
+Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8
+Date: Wed, 07 Nov 2018 03:20:18 GMT
+X-Vcap-Request-Id: c04c32b6-99e0-41d2-4ad7-df426bbdfd90
+
+{
+    "_links": {
+        "auditevents": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/auditevents",
+            "templated": false
+        },
+        "beans": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/beans",
+            "templated": false
+        },
+        "conditions": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/conditions",
+            "templated": false
+        },
+        "configprops": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/configprops",
+            "templated": false
+        },
+        "env": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/env",
+            "templated": false
+        },
+        "env-toMatch": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/env/{toMatch}",
+            "templated": true
+        },
+        "health": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/health",
+            "templated": false
+        },
+        "heapdump": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/heapdump",
+            "templated": false
+        },
+        "httptrace": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/httptrace",
+            "templated": false
+        },
+        "info": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/info",
+            "templated": false
+        },
+        "loggers": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/loggers",
+            "templated": false
+        },
+        "loggers-name": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/loggers/{name}",
+            "templated": true
+        },
+        "mappings": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/mappings",
+            "templated": false
+        },
+        "metrics": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/metrics",
+            "templated": false
+        },
+        "metrics-requiredMetricName": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/metrics/{requiredMetricName}",
+            "templated": true
+        },
+        "scheduledtasks": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/scheduledtasks",
+            "templated": false
+        },
+        "self": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator",
+            "templated": false
+        },
+        "threaddump": {
+            "href": "http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator/threaddump",
+            "templated": false
+        }
+    }
 }
 ```
 
