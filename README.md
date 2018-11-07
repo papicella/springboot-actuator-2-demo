@@ -139,7 +139,7 @@ X-Vcap-Request-Id: 4c12e65a-3d28-4d69-5e43-d937686dbdad
 }
 ```
 
-- View All Endpoints
+- View All Endpoints which can be called
 
 ```
 pasapicella@pas-macbook:~$ http http://springboot-actuator-appsmanager-delightful-jaguar.cfapps.io/actuator
